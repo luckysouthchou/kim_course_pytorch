@@ -27,7 +27,7 @@ print('predict (before training)', 4, forward(4).data[0])
 # train loop
 for epoch in range(10):
     for x_val, y_val in zip(x_data, y_data):
-        l = loss(x_val, y_val)
+        l = loss(x)
         l.backward()
         print('\tgrad: ', x_val, y_val, w1.grad.data[0])
         print('\tgrad: ', x_val, y_val, w2.grad.data[0])
